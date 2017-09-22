@@ -188,13 +188,14 @@ footer {
     overflow: hidden;
     position: absolute;
     padding-top: 3em;
+    display: block;
 }
 
 .triangle1 {
     position: relative;
     left: -15%;
     top: 25;
-    width: 47%;
+    max-width: 47%;
     height: 75%;
 }
 
@@ -205,3 +206,88 @@ footer {
     max-width: 47%;
     height: 75%;
 }
+
+
+/* FORMULAIRE CONNECXION */
+
+.formulaire {
+    background-color: $black;
+    text-align: center;
+    width: 60%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.30);
+    p {
+        text-transform: uppercase;
+        margin: 1.5em auto;
+    }
+    input {
+        border: 1px solid $pink;
+        border-radius: 0px;
+        margin-top: 0px;
+    }
+    .btn {
+        border: 1px solid $pink;
+        border-radius: 0px;
+        color: $white;
+        background: $black;
+        margin-top: 1em;
+    }
+    .oubli {
+        color: $pink;
+        margin-top: 0px;
+        font-size: 0.6em;
+        position: absolute;
+        top: 67%;
+        right: 50%;
+    }
+}
+
+.formulaire::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid $pink;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: 0px;
+    top: 1em;
+}
+
+.formulaire::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid $pink;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: 45.5%;
+    top: 1em;
+}
+
+.form-horizontal::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid $white;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: 0px;
+    top: 2em;
+}
+
+.form-horizontal::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid $white;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: 45.5%;
+    top: 2em;
+}
+
+
+/* MOT DE PASSE OUBLIE ? */
