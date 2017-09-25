@@ -40,48 +40,68 @@ body {
     text-transform: uppercase;
     padding: 0px;
     margin: 0 auto;
+    border: none;
+    border-radius: 0;
+    .navbar-right {
+        margin-right: 1em;
+    }
     .navbar-brand {
-        margin-left: 0.3em;
         img {
             width: 8em;
         }
     }
     .nav {
-        height: 100%;
+        position: relative;
+    }
+    .avatar {
+        width: 2em;
+        height: 2em;
+        border: 1px solid $white;
+        border-radius: 5px;
+        margin: auto;
     }
     ul {
-        top: 0px;
-        right: 0px;
-        .connect {
-            margin-right: 3em;
+        display: flex;
+        position: relative;
+        height: 100%;
+    }
+    .account {
+        display: flex;
+        p {
+            margin-left: 1em;
         }
-        .signin {
-            margin-right: 1em;
-        }
-        li {
-            width: auto;
+    }
+    li {
+        width: auto;
+        height: 100%;
+        a {
+            width: 11em;
             height: 100%;
-            a {
-                width: auto;
-                height: 100%;
-                text-decoration: none;
-                color: $white;
-                display: flex;
-                .icon {
-                    margin: auto;
-                    margin-left: 1em;
-                }
-                p {
-                    margin: auto;
-                }
+            text-decoration: none;
+            color: $white;
+            display: flex;
+            .icon {
+                margin: auto;
+                margin-left: 1em;
             }
-            img {
-                margin-top: 0px;
-                width: 1.5em;
+            .add {
+                margin-right: 1em;
             }
-            a:hover {
-                color: $pink;
+            p {
+                margin: auto;
             }
+            .disconnect {
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+        }
+        img {
+            margin-top: 0px;
+            width: 1.5em;
+        }
+        a:hover {
+            color: $black;
+            background-color: $pink
         }
     }
 }
@@ -101,7 +121,7 @@ footer {
     ul {
         display: flex;
         padding: 0px;
-        width: 45em;
+        width: 7em;
         margin: auto;
         text-align: center;
         li {
@@ -143,22 +163,23 @@ footer {
 /* LOGO */
 
 .logo {
-    position: relative;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    position: absolute;
     left: 50%;
+    top: 15%;
     transform: translate(-50%);
-    width: 18em;
+    width: 20rem;
 }
 
 
 /* SECTION CONTENU */
 
 #contenuAccueil {
-    position: relative;
+    position: absolute;
     display: flex;
     width: 50%;
-    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     .texte {
         width: 20em;
         text-align: justify;
@@ -186,7 +207,7 @@ footer {
 .blockTriangles {
     width: 100vw;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     padding-top: 3em;
     display: block;
 }
@@ -194,7 +215,7 @@ footer {
 .triangle1 {
     position: relative;
     left: -15%;
-    top: 25;
+    top: 50%;
     max-width: 47%;
     height: 75%;
 }
@@ -202,19 +223,20 @@ footer {
 .triangle2 {
     position: relative;
     right: -20%;
-    top: 25%;
+    top: 50%;
     max-width: 47%;
     height: 75%;
 }
 
 
-/* FORMULAIRE CONNECXION */
+/* FORMULAIRE CONNEXION */
 
 .formulaire {
     background-color: $black;
     text-align: center;
-    width: 60%;
+    width: 50%;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.30);
+    height: 100%;
     p {
         text-transform: uppercase;
         margin: 1.5em auto;
@@ -229,17 +251,29 @@ footer {
         border-radius: 0px;
         color: $white;
         background: $black;
-        margin-top: 1em;
+        margin-top: 0.8em;
     }
     .oubli {
         color: $pink;
-        margin-top: 0px;
+        margin-top: -10px;
         font-size: 0.6em;
         position: absolute;
-        top: 67%;
-        right: 50%;
+        right: 54%;
+    }
+    .col-sm-12 {
+        width: 80%;
+        padding: 0px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .col-sm-offset-2 {
+        margin: auto;
+        padding-top: 0px;
     }
 }
+
+
+/* TRIANGLES FORMULAIRES */
 
 .formulaire::before {
     content: "";
@@ -261,7 +295,7 @@ footer {
     border-right: 20px solid $pink;
     border-bottom: 10px solid transparent;
     position: absolute;
-    right: 45.5%;
+    right: 50%;
     top: 1em;
 }
 
@@ -285,9 +319,67 @@ footer {
     border-right: 20px solid $white;
     border-bottom: 10px solid transparent;
     position: absolute;
-    right: 45.5%;
+    right: 50%;
     top: 2em;
 }
 
 
-/* MOT DE PASSE OUBLIE ? */
+/* MODALE CREATION POST-IT */
+
+h4 {
+    text-transform: uppercase;
+}
+
+.add {
+    width: 1em;
+    margin: auto;
+}
+
+.modal-content {
+    background-color: $black;
+    border: 1px solid $pink;
+    border-radius: 0px;
+}
+
+.btn-info {
+    display: flex;
+    height: 100%;
+    margin: auto;
+    border-radius: 0px;
+    background-color: $black;
+    border: none;
+    p {
+        margin: auto;
+    }
+    img {
+        margin: auto 1em;
+    }
+}
+
+.btn-info:hover {
+    color: $pink;
+    background-color: $black;
+}
+
+.btn-info:focus {
+    background-color: $black;
+}
+
+.importance {
+    display: flex;
+    .vert {
+        width: 2em;
+        height: 2em;
+        background-color: green;
+    }
+    .orange {
+        width: 2em;
+        height: 2em;
+        background-color: orange;
+    }
+    .rouge {
+        width: 2em;
+        height: 2em;
+        background-color: red;
+    }
+}

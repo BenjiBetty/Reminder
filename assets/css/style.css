@@ -28,39 +28,54 @@ body {
   background: #333333;
   text-transform: uppercase;
   padding: 0px;
-  margin: 0 auto; }
-  .navbar .navbar-brand {
-    margin-left: 0.3em; }
-    .navbar .navbar-brand img {
-      width: 8em; }
+  margin: 0 auto;
+  border: none;
+  border-radius: 0; }
+  .navbar .navbar-right {
+    margin-right: 1em; }
+  .navbar .navbar-brand img {
+    width: 8em; }
   .navbar .nav {
-    height: 100%; }
+    position: relative; }
+  .navbar .avatar {
+    width: 2em;
+    height: 2em;
+    border: 1px solid #F5F5F5;
+    border-radius: 5px;
+    margin: auto; }
   .navbar ul {
-    top: 0px;
-    right: 0px; }
-    .navbar ul .connect {
-      margin-right: 3em; }
-    .navbar ul .signin {
-      margin-right: 1em; }
-    .navbar ul li {
-      width: auto;
-      height: 100%; }
-      .navbar ul li a {
-        width: auto;
-        height: 100%;
-        text-decoration: none;
-        color: #F5F5F5;
-        display: flex; }
-        .navbar ul li a .icon {
-          margin: auto;
-          margin-left: 1em; }
-        .navbar ul li a p {
-          margin: auto; }
-      .navbar ul li img {
-        margin-top: 0px;
-        width: 1.5em; }
-      .navbar ul li a:hover {
-        color: #F55C54; }
+    display: flex;
+    position: relative;
+    height: 100%; }
+  .navbar .account {
+    display: flex; }
+    .navbar .account p {
+      margin-left: 1em; }
+  .navbar li {
+    width: auto;
+    height: 100%; }
+    .navbar li a {
+      width: 11em;
+      height: 100%;
+      text-decoration: none;
+      color: #F5F5F5;
+      display: flex; }
+      .navbar li a .icon {
+        margin: auto;
+        margin-left: 1em; }
+      .navbar li a .add {
+        margin-right: 1em; }
+      .navbar li a p {
+        margin: auto; }
+      .navbar li a .disconnect {
+        margin-left: 1em;
+        margin-right: 1em; }
+    .navbar li img {
+      margin-top: 0px;
+      width: 1.5em; }
+    .navbar li a:hover {
+      color: #333333;
+      background-color: #F55C54; }
 
 /* FOOTER */
 footer {
@@ -75,7 +90,7 @@ footer {
   footer ul {
     display: flex;
     padding: 0px;
-    width: 45em;
+    width: 7em;
     margin: auto;
     text-align: center; }
     footer ul li {
@@ -107,19 +122,20 @@ footer {
 
 /* LOGO */
 .logo {
-  position: relative;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  position: absolute;
   left: 50%;
+  top: 15%;
   transform: translate(-50%);
-  width: 18em; }
+  width: 20rem; }
 
 /* SECTION CONTENU */
 #contenuAccueil {
-  position: relative;
+  position: absolute;
   display: flex;
   width: 50%;
-  margin: auto; }
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
   #contenuAccueil .texte {
     width: 20em;
     text-align: justify;
@@ -141,30 +157,31 @@ footer {
 .blockTriangles {
   width: 100vw;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   padding-top: 3em;
   display: block; }
 
 .triangle1 {
   position: relative;
   left: -15%;
-  top: 25;
+  top: 50%;
   max-width: 47%;
   height: 75%; }
 
 .triangle2 {
   position: relative;
   right: -20%;
-  top: 25%;
+  top: 50%;
   max-width: 47%;
   height: 75%; }
 
-/* FORMULAIRE CONNECXION */
+/* FORMULAIRE CONNEXION */
 .formulaire {
   background-color: #333333;
   text-align: center;
-  width: 60%;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3); }
+  width: 50%;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  height: 100%; }
   .formulaire p {
     text-transform: uppercase;
     margin: 1.5em auto; }
@@ -177,15 +194,23 @@ footer {
     border-radius: 0px;
     color: #F5F5F5;
     background: #333333;
-    margin-top: 1em; }
+    margin-top: 0.8em; }
   .formulaire .oubli {
     color: #F55C54;
-    margin-top: 0px;
+    margin-top: -10px;
     font-size: 0.6em;
     position: absolute;
-    top: 67%;
-    right: 50%; }
+    right: 54%; }
+  .formulaire .col-sm-12 {
+    width: 80%;
+    padding: 0px;
+    left: 50%;
+    transform: translate(-50%); }
+  .formulaire .col-sm-offset-2 {
+    margin: auto;
+    padding-top: 0px; }
 
+/* TRIANGLES FORMULAIRES */
 .formulaire::before {
   content: "";
   width: 0;
@@ -205,7 +230,7 @@ footer {
   border-right: 20px solid #F55C54;
   border-bottom: 10px solid transparent;
   position: absolute;
-  right: 45.5%;
+  right: 50%;
   top: 1em; }
 
 .form-horizontal::before {
@@ -227,7 +252,52 @@ footer {
   border-right: 20px solid #F5F5F5;
   border-bottom: 10px solid transparent;
   position: absolute;
-  right: 45.5%;
+  right: 50%;
   top: 2em; }
 
-/* MOT DE PASSE OUBLIE ? */
+/* MODALE CREATION POST-IT */
+h4 {
+  text-transform: uppercase; }
+
+.add {
+  width: 1em;
+  margin: auto; }
+
+.modal-content {
+  background-color: #333333;
+  border: 1px solid #F55C54;
+  border-radius: 0px; }
+
+.btn-info {
+  display: flex;
+  height: 100%;
+  margin: auto;
+  border-radius: 0px;
+  background-color: #333333;
+  border: none; }
+  .btn-info p {
+    margin: auto; }
+  .btn-info img {
+    margin: auto 1em; }
+
+.btn-info:hover {
+  color: #F55C54;
+  background-color: #333333; }
+
+.btn-info:focus {
+  background-color: #333333; }
+
+.importance {
+  display: flex; }
+  .importance .vert {
+    width: 2em;
+    height: 2em;
+    background-color: green; }
+  .importance .orange {
+    width: 2em;
+    height: 2em;
+    background-color: orange; }
+  .importance .rouge {
+    width: 2em;
+    height: 2em;
+    background-color: red; }

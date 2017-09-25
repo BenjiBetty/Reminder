@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REMINDER</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/scss/style.scss" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Nouveau Post-it</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" id="text" placeholder="Titre">
+                        <input type="text" class="form-control" id="text" placeholder="Contenu">
+                        <div class="importance">
+                            <p>Importance:</p>
+                            <div class="couleurs">
+                                <div class="vert"></div>
+                                <div class="orange"></div>
+                                <div class="rouge"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Valider</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <header>
+            <nav class="navbar">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logotype.svg"></a>
+
+                <ul class="nav navbar-right">
+                    <li class="connect">
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                            <img src="assets/img/square-add-button.svg" alt="#">
+                            <p>Ajouter un post-it</p>
+                        </button>
+                    </li>
+                    <li class="account">
+                        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                            <img class="avatar" src="assets/img/chirac.jpg" alt="#">
+                            <p>Jacques</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="disconnect" src="assets/img/logout.svg" alt="#"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="blockTriangles">
+            <img class="triangle1" src="assets/img/triangles.svg" alt="#">
+            <img class="triangle2" src="assets/img/triangles.svg" alt="#">
+        </div>
+
+        <section id="contenuAccueil">
+
+
+        </section>
+
+        <footer class="footer container-fluid">
+            <ul>
+                <li>
+                    <a href="#"><img class="socialIcon" src="assets/img/facebook-logo.svg" alt="#">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img class="socialIcon" src="assets/img/twitter-logo.svg" alt="#">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img class="socialIcon" src="assets/img/linkedin-sign.svg" alt="#">
+                    </a>
+                </li>
+            </ul>
+
+            <p class="mentions">Mentions légales</p>
+
+        </footer>
+    </div>
+
+</body>
+<script src="assets/js/jquery-3.2.1.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/script.js"></script>
+
+</html>
