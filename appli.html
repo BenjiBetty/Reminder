@@ -25,82 +25,99 @@
                         <h4 class="modal-title">Nouveau Post-it</h4>
                     </div>
                     <div class="modal-body">
-                        <input type="text" class="form-control" id="text" placeholder="Titre">
-                        <input type="text" class="form-control" id="text" placeholder="Contenu">
-                        <div class="importance">
-                            <p>Importance:</p>
-                            <div class="couleurs">
-                                <div class="vert"></div>
-                                <div class="orange"></div>
-                                <div class="rouge"></div>
-                            </div>
+                        <input type="text" class="form-control titre" id="text" placeholder="Titre">
+                        <textarea class="contenu form-control" placeholder="Contenu" rows="5" id="comment"></textarea>
+
+                        <div class="btn-group">
+                            <button type="button" class="vert btn btn-primary">Peu important</button>
+                            <button type="button" class="orange btn btn-primary">Important</button>
+                            <button type="button" class="rouge btn btn-primary">Urgent</button>
                         </div>
+
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Valider</button>
                     </div>
                 </div>
 
             </div>
+
         </div>
+    </div>
 
 
 
-        <header>
-            <nav class="navbar">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/logotype.svg"></a>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html"><img src="assets/img/logotype.svg"></a>
 
-                <ul class="nav navbar-right">
-                    <li class="connect">
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Rechercher">
+                </div>
+                <button type="submit" class="btn btn-default"><img class="searchIcon" src="assets/img/magnifying-glass.svg" alt="#"></button>
+            </form>
+
+            <ul class="nav navbar-right">
+
+                <li class="connect">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
                             <img src="assets/img/square-add-button.svg" alt="#">
                             <p>Ajouter un post-it</p>
                         </button>
-                    </li>
-                    <li class="account">
-                        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-                            <img class="avatar" src="assets/img/chirac.jpg" alt="#">
-                            <p>Jacques</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="disconnect" src="assets/img/logout.svg" alt="#"></a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="blockTriangles">
-            <img class="triangle1" src="assets/img/triangles.svg" alt="#">
-            <img class="triangle2" src="assets/img/triangles.svg" alt="#">
-        </div>
-
-        <section id="contenuAccueil">
-
-
-        </section>
-
-        <footer class="footer container-fluid">
-            <ul>
-                <li>
-                    <a href="#"><img class="socialIcon" src="assets/img/facebook-logo.svg" alt="#">
+                </li>
+                <li class="account">
+                    <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                        <img class="avatar" src="assets/img/chirac.jpg" alt="#">
+                        <p>Jacques</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#"><img class="socialIcon" src="assets/img/twitter-logo.svg" alt="#">
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img class="socialIcon" src="assets/img/linkedin-sign.svg" alt="#">
-                    </a>
+                    <a href="#">
+                        <img class="disconnect" src="assets/img/logout.svg" alt="#"></a>
                 </li>
             </ul>
+        </nav>
+    </header>
 
-            <p class="mentions">Mentions légales</p>
+    <div class="blockTriangles">
+        <img class="triangle1" src="assets/img/triangles.svg" alt="#">
+        <img class="triangle2" src="assets/img/triangles.svg" alt="#">
+    </div>
 
-        </footer>
+    <section class="contenuAccueil">
+        <div class="postit">
+            <h4 class="titrePostit">Post-It Test</h4>
+            <div class="blocDate">
+                <p class="datePostit">26/09/2017</p>
+                <div id="triangle-left"></div>
+            </div>
+            <p class="contenuPostit">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra dui ac odio condimentum pharetra. Morbi ut tellus eget orci iaculis facilisis lacinia vitae leo. Sed lectus ligula, finibus quis justo nec, interdum auctor ligula. In
+                maximus lectus eu scelerisque venenatis. Pellentesque malesuada tristique sapien, ac eleifend odio dapibus nec.</p>
+        </div>
+
+    </section>
+
+    <footer class="footer container-fluid">
+        <ul>
+            <li>
+                <a href="#"><img class="socialIcon" src="assets/img/facebook-logo.svg" alt="#">
+                </a>
+            </li>
+            <li>
+                <a href="#"><img class="socialIcon" src="assets/img/twitter-logo.svg" alt="#">
+                </a>
+            </li>
+            <li>
+                <a href="#"><img class="socialIcon" src="assets/img/linkedin-sign.svg" alt="#">
+                </a>
+            </li>
+        </ul>
+
+        <p class="mentions">Mentions légales</p>
+
+    </footer>
     </div>
 
 </body>

@@ -31,12 +31,17 @@ body {
   margin: 0 auto;
   border: none;
   border-radius: 0; }
-  .navbar .navbar-right {
-    margin-right: 1em; }
+  .navbar .search {
+    width: 100%;
+    margin: auto; }
+  .navbar .searchIcon {
+    width: 1em; }
   .navbar .navbar-brand img {
     width: 8em; }
   .navbar .nav {
     position: relative; }
+  .navbar .search {
+    margin: auto; }
   .navbar .avatar {
     width: 2em;
     height: 2em;
@@ -266,7 +271,11 @@ h4 {
 .modal-content {
   background-color: #333333;
   border: 1px solid #F55C54;
-  border-radius: 0px; }
+  border-radius: 0px;
+  width: 50%;
+  margin: auto;
+  margin-top: 50%;
+  transform: translateY(-50%); }
 
 .btn-info {
   display: flex;
@@ -287,17 +296,92 @@ h4 {
 .btn-info:focus {
   background-color: #333333; }
 
-.importance {
-  display: flex; }
-  .importance .vert {
-    width: 2em;
-    height: 2em;
-    background-color: green; }
-  .importance .orange {
-    width: 2em;
-    height: 2em;
-    background-color: orange; }
-  .importance .rouge {
-    width: 2em;
-    height: 2em;
-    background-color: red; }
+.contenu {
+  margin-top: 1em;
+  border: solid 1px #F55C54;
+  border-radius: 0px; }
+
+.titre {
+  border: solid 1px #F55C54;
+  border-radius: 0px; }
+
+.vert {
+  background-color: green;
+  margin-top: 1em;
+  border-radius: 0px;
+  border: none; }
+
+.vert:hover {
+  background-color: #005C00; }
+
+.vert:focus {
+  background-color: #333333;
+  color: #F55C54; }
+
+.orange {
+  background-color: orange;
+  margin-top: 1em;
+  border-radius: 0px;
+  border: none; }
+
+.orange:hover {
+  background-color: #CE8200; }
+
+.orange:focus {
+  background-color: #333333;
+  color: #F55C54; }
+
+.rouge {
+  background-color: red;
+  margin-top: 1em;
+  border-radius: 0px;
+  border: none;
+  width: 72px; }
+
+.rouge:hover {
+  background-color: #B80000; }
+
+.rouge:focus {
+  background-color: #333333;
+  color: #F55C54; }
+
+.btn-default {
+  border: 1px solid #F55C54;
+  border-radius: 0px;
+  background-color: #333333;
+  color: #F5F5F5; }
+
+/* POST-IT */
+.contenuAccueil {
+  position: absolute;
+  display: flex;
+  width: 90%;
+  height: 70%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.postit {
+  position: absolute;
+  top: 0%;
+  width: 15%;
+  height: auto;
+  padding: 1em;
+  background-color: #F5F5F5;
+  color: #333333;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25); }
+  .postit .blocDate {
+    position: relative;
+    width: 100%; }
+    .postit .blocDate #triangle-left {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-right: 20px solid green;
+      border-bottom: 10px solid transparent;
+      right: -10%;
+      top: 0%; }
+    .postit .blocDate .datePostit {
+      font-size: 0.8em;
+      width: 100%; }

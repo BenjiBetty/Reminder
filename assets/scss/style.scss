@@ -14,6 +14,22 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+@mixin boutons {
+    margin-top: 1em;
+    border-radius: 0px;
+    border: none;
+}
+
+@mixin verticalCenter {
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin horizontalCenter {
+    margin-left: 50%;
+    transform: translateY(-50%);
+}
+
 $pink:#F55C54;
 $black:#333333;
 $white:#F5F5F5;
@@ -42,8 +58,12 @@ body {
     margin: 0 auto;
     border: none;
     border-radius: 0;
-    .navbar-right {
-        margin-right: 1em;
+    .search {
+        width: 100%;
+        margin: auto;
+    }
+    .searchIcon {
+        width: 1em;
     }
     .navbar-brand {
         img {
@@ -52,6 +72,9 @@ body {
     }
     .nav {
         position: relative;
+    }
+    .search {
+        margin: auto;
     }
     .avatar {
         width: 2em;
@@ -339,6 +362,10 @@ h4 {
     background-color: $black;
     border: 1px solid $pink;
     border-radius: 0px;
+    width: 50%;
+    margin: auto;
+    margin-top: 50%;
+    transform: translateY(-50%);
 }
 
 .btn-info {
@@ -365,21 +392,105 @@ h4 {
     background-color: $black;
 }
 
-.importance {
+.contenu {
+    margin-top: 1em;
+    border: solid 1px $pink;
+    border-radius: 0px;
+}
+
+.titre {
+    border: solid 1px $pink;
+    border-radius: 0px;
+}
+
+.vert {
+    background-color: green;
+    @include boutons();
+}
+
+.vert:hover {
+    background-color: #005C00;
+}
+
+.vert:focus {
+    background-color: $black;
+    color: $pink;
+}
+
+.orange {
+    background-color: orange;
+    @include boutons();
+}
+
+.orange:hover {
+    background-color: #CE8200;
+}
+
+.orange:focus {
+    background-color: $black;
+    color: $pink;
+}
+
+.rouge {
+    background-color: red;
+    @include boutons();
+    width: 72px;
+}
+
+.rouge:hover {
+    background-color: #B80000;
+}
+
+.rouge:focus {
+    background-color: $black;
+    color: $pink;
+}
+
+.btn-default {
+    border: 1px solid $pink;
+    border-radius: 0px;
+    background-color: $black;
+    color: $white;
+}
+
+
+/* POST-IT */
+
+.contenuAccueil {
+    position: absolute;
     display: flex;
-    .vert {
-        width: 2em;
-        height: 2em;
-        background-color: green;
-    }
-    .orange {
-        width: 2em;
-        height: 2em;
-        background-color: orange;
-    }
-    .rouge {
-        width: 2em;
-        height: 2em;
-        background-color: red;
+    width: 90%;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.postit {
+    position: absolute;
+    top: 0%;
+    width: 15%;
+    height: auto;
+    padding: 1em;
+    background-color: $white;
+    color: $black;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    .blocDate {
+        position: relative;
+        width: 100%;
+        #triangle-left {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-right: 20px solid green;
+            border-bottom: 10px solid transparent;
+            right: -10%;
+            top: 0%;
+        }
+        .datePostit {
+            font-size: 0.8em;
+            width: 100%;
+        }
     }
 }
